@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".uicontrols.CheckBoxesActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Boxes Example"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your interests:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxFiction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiction"
+        android:layout_marginBottom="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxPoetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poetry"
+        android:layout_marginBottom="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/showInterestsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Selected Interests" />
+
+</LinearLayout>

@@ -1,138 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".activities.MainActivity">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:hint="@string/search_hint"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:layout_marginBottom="16dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:inputType="text" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp"
-            android:textColor="?attr/colorPrimary" />
+    <Button
+        android:id="@+id/addBookButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_book"
+        android:layout_marginBottom="8dp" />
 
-        <!-- Search Section -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/search_hint"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginBottom="16dp">
+    <Button
+        android:id="@+id/layoutGalleryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Layout Gallery"
+        android:layout_marginBottom="8dp" />
 
-            <AutoCompleteTextView
-                android:id="@+id/searchAutoCompleteTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:completionThreshold="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/uiControlsGalleryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UI Controls Gallery"
+        android:layout_marginBottom="16dp" /> <!-- ADD THIS BUTTON -->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/select_genre"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
 
-        <Spinner
-            android:id="@+id/genreSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:background="?attr/editTextBackground"
-            android:layout_marginBottom="16dp" />
-
-        <Button
-            android:id="@+id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search_button"
-            android:layout_marginBottom="24dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Book List Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="African Literature Books"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/booksRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            tools:listitem="@layout/item_book" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Navigation Buttons (kept for other features) -->
-        <!-- Removed "View All Books" button as RecyclerView now handles it -->
-        <Button
-            android:id="@+id/viewWebViewButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view_webview_button"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/viewLayoutsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view_layouts_button"
-            android:layout_marginBottom="24dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:layout_marginBottom="24dp"/>
-
-        <!-- Service Control Buttons -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/service_control_header"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/startBookServiceButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/start_book_service_button"
-            android:layout_marginBottom="12dp" />
-
-        <Button
-            android:id="@+id/startSyncServiceButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/start_sync_service_button"
-            android:layout_marginBottom="24dp" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

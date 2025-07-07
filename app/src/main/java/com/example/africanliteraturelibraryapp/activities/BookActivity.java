@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.africanliteraturelibraryapp.R;
 import com.example.africanliteraturelibraryapp.data.model.Book;
-import com.squareup.picasso.Picasso; // Import Picasso
+import com.squareup.picasso.Picasso;
 
 public class BookActivity extends AppCompatActivity {
 
+    // Declare member variables for UI components
     private TextView bookTitleTextView;
     private TextView bookAuthorTextView;
     private TextView bookGenreTextView;
@@ -30,7 +31,7 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
-        // Initialize UI components
+        // Initialize UI components by finding them by their IDs
         bookTitleTextView = findViewById(R.id.bookTitleTextView);
         bookAuthorTextView = findViewById(R.id.bookAuthorTextView);
         bookGenreTextView = findViewById(R.id.bookGenreTextView);
@@ -48,7 +49,7 @@ public class BookActivity extends AppCompatActivity {
             bookGenreTextView.setText("Genre: " + currentBook.getGenre());
             bookDescriptionTextView.setText(currentBook.getDescription());
 
-            // --- Use Picasso to load book cover image ---
+            // Use Picasso to load book cover image
             if (currentBook.getCoverImageUrl() != null && !currentBook.getCoverImageUrl().isEmpty()) {
                 Picasso.get().load(currentBook.getCoverImageUrl())
                         .placeholder(R.drawable.ic_launcher_background) // Placeholder while loading
@@ -57,7 +58,6 @@ public class BookActivity extends AppCompatActivity {
             } else {
                 bookCoverImageView.setImageResource(R.drawable.ic_launcher_background); // Default placeholder
             }
-            // --- End Picasso usage ---
 
             readBookButton.setOnClickListener(new View.OnClickListener() {
                 @Override

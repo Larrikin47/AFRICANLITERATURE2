@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".uicontrols.RadioButtonsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio Buttons Example"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred Reading Format:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/readingFormatRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioEbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-book" />
+
+        <RadioButton
+            android:id="@+id/radioAudiobook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audiobook" />
+
+        <RadioButton
+            android:id="@+id/radioPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Print Book" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitFormatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Selection"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/selectedFormatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Format: None"
+        android:textSize="16sp" />
+
+</LinearLayout>

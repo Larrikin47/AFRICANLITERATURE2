@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".activities.BookActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="16dp"
         android:gravity="center_horizontal">
 
         <ImageView
@@ -19,8 +19,8 @@
             android:layout_height="300dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="@string/book_cover_description" />
+            android:contentDescription="@string/book_cover_description"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/bookTitleTextView"
@@ -28,43 +28,43 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:text="Book Title"
-            android:layout_marginBottom="8dp" />
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp"
+            tools:text="Things Fall Apart" />
 
         <TextView
             android:id="@+id/bookAuthorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:text="Author Name"
-            android:layout_marginBottom="8dp" />
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="8dp"
+            tools:text="Chinua Achebe" />
 
         <TextView
             android:id="@+id/bookGenreTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Genre: Fiction"
-            android:layout_marginBottom="16dp" />
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="16dp"
+            tools:text="Genre: Fiction" />
 
         <TextView
             android:id="@+id/bookDescriptionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="This is a detailed description of the book, providing insights into its plot, themes, and significance in African literature. It can be a lengthy text explaining various aspects of the story and its cultural context."
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
             android:lineSpacingExtra="4dp"
-            android:justificationMode="inter_word"
-            tools:targetApi="o" />
+            android:layout_marginBottom="24dp"
+            tools:text="A classic novel about pre-colonial Igbo life and the impact of colonialism, told through the life of Okonkwo." />
 
-        <!-- TODO: Add a button to "Read Book" which could launch WebViewActivity or an internal reader -->
         <Button
             android:id="@+id/readBookButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/read_book_button"
-            android:layout_marginTop="24dp"
-            android:visibility="gone" /> <!-- Set to visible when content is available -->
+            android:text="@string/read_book_button" />
 
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".uicontrols.PickersActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date and Time Pickers"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/selectedDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date: Not set"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/timePickerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Time"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/selectedTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Time: Not set"
+        android:textSize="16sp" />
+
+</LinearLayout>

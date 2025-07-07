@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">African Literature Library</string>
-    <string name="search_hint">Search for books or authors...</string>
-    <string name="select_genre">Select Genre:</string>
-    <string name="search_button">Search</string>
-    <string name="view_books_button">View All Books</string>
-    <string name="view_layouts_button">Layout Gallery</string>
-    <string name="start_book_service_button">Start Book Processing Service</string>
-    <string name="start_sync_service_button">Start Book Sync Service</string>
-    <string name="view_webview_button">View African Literature Info (Web)</string>
-    <string name="open_date_picker">Open Date Picker</string>
-    <string name="service_control_header">Background Services</string>
-
-    <!-- Book Activity Strings -->
+    <string name="app_name">African Literature Library App</string>
+    <string name="app_title">African Literature Library</string>
+    <string name="search_hint">Search books...</string>
+    <string name="add_new_book">Add New Book</string>
+    <string name="read_book_button">Read Book</string> <!-- THIS IS THE LINE IN QUESTION -->
     <string name="book_cover_description">Book Cover Image</string>
-    <string name="read_book_button">Read Book</string>
-
-    <!-- Layout Gallery Strings -->
-    <string name="layout_gallery_title">Android Layout Gallery</string>
-    <string name="linear_layout_button">Linear Layout Demo</string>
-    <string name="frame_layout_button">Frame Layout Demo</string>
-    <string name="relative_layout_button">Relative Layout Demo</string>
-    <string name="table_layout_button">Table Layout Demo</string>
-    <string name="tab_layout_button">Tab Layout Demo</string>
-
-    <!-- Layout Demo Titles -->
-    <string name="linear_layout_title">Linear Layout Example</string>
-    <string name="frame_layout_title">Frame Layout Example</string>
-    <string name="relative_layout_title">Relative Layout Example</string>
-    <string name="table_layout_title">Table Layout Example</string>
-    <string name="tab_layout_title">Tab Layout Example</string>
-
-    <!-- Generic Descriptions -->
-    <string name="image_description">A decorative image</string>
-
+    <string name="add_book_title">Add New Book</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_author">Author</string>
+    <string name="hint_genre">Genre</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_cover_url">Cover Image URL</string>
+    <string name="hint_content_url">Content URL (e.g., PDF link)</string>
+    <string name="save_book">Save Book</string>
 </resources>

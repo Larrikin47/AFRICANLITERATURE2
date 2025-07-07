@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.UiControlsGalleryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI Controls Gallery"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:textColor="?attr/colorPrimary" />
+
+        <Button
+            android:id="@+id/pickersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickers (Date/Time)"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/mapViewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map View"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/autoCompleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto Complete Text"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/spinnerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spinner (Dropdown)"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/radioButtonsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio Buttons"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/checkBoxesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Boxes"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/toggleButtonButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toggle Button"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>

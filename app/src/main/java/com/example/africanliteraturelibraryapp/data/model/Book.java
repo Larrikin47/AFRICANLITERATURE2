@@ -1,44 +1,43 @@
 package com.example.africanliteraturelibraryapp.data.model;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore; // Import the @Ignore annotation
+import androidx.room.Ignore; // Import @Ignore
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
 /**
- * Data model class representing a Book in the African Literature Library.
- * Implements Serializable to allow passing Book objects directly via Intents.
- *
- * This class is also annotated as a Room database @Entity.
+ * Represents a Book entity in the database.
+ * Implements Serializable to allow passing Book objects between Activities via Intents.
  */
 @Entity(tableName = "books")
 public class Book implements Serializable {
+
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    @ColumnInfo(name = "id")
+    private long id;
+
+    @ColumnInfo(name = "title")
     private String title;
+
+    @ColumnInfo(name = "author")
     private String author;
+
+    @ColumnInfo(name = "genre")
     private String genre;
+
+    @ColumnInfo(name = "description")
     private String description;
+
+    @ColumnInfo(name = "cover_image_url")
     private String coverImageUrl;
+
+    @ColumnInfo(name = "content_url")
     private String contentUrl;
 
-    // Constructor for creating new Book objects (without ID for auto-generation)
-    // This constructor is used when you create a Book object before inserting it into the DB.
-    // Room should IGNORE this constructor when it's trying to read data from the DB.
-    @Ignore // <--- ADD THIS ANNOTATION
-    public Book(String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.description = description;
-        this.coverImageUrl = coverImageUrl;
-        this.contentUrl = contentUrl;
-    }
-
-    // Constructor with ID (used by Room when retrieving from DB and for manual ID assignment if needed)
-    // Room will use this constructor when it reads data from the database.
-    public Book(int id, String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
+    // Primary constructor for Room to use when reading from the database
+    public Book(long id, String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -48,8 +47,15 @@ public class Book implements Serializable {
         this.contentUrl = contentUrl;
     }
 
+    // Convenience constructor for creating new Book objects before insertion
+    // Room will ignore this constructor when reading from the database
+    @Ignore // <--- ADDED THIS ANNOTATION
+    public Book(String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
+        this(0, title, author, genre, description, coverImageUrl, contentUrl); // ID will be auto-generated
+    }
+
     // Getters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -77,8 +83,8 @@ public class Book implements Serializable {
         return contentUrl;
     }
 
-    // Setters
-    public void setId(int id) {
+    // Setters (Room may require setters for some operations, or you can make fields public)
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -104,15 +110,5 @@ public class Book implements Serializable {
 
     public void setContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", genre='" + genre + '\'' +
-                '}';
     }
 }
