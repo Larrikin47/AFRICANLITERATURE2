@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Android colors (often included by default, but good to have) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Custom colors for your app's theme and UI -->
+    <color name="colorPrimary">#4CAF50</color> <!-- Green -->
+    <color name="colorPrimaryVariant">#388E3C</color> <!-- Darker Green -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- Text/icons on primary color -->
+
+    <color name="colorSecondary">#FFC107</color> <!-- Amber -->
+    <color name="colorSecondaryVariant">#FFA000</color> <!-- Darker Amber -->
+    <color name="colorOnSecondary">#000000</color> <!-- Text/icons on secondary color -->
+
+    <color name="colorSurface">#FFFFFF</color> <!-- Background for cards, sheets, dialogs -->
+    <color name="colorOnSurface">#212121</color> <!-- Text/icons on surface color -->
+    <color name="colorOnSurfaceVariant">#757575</color> <!-- Secondary text/icons on surface -->
+    <color name="colorError">#F44336</color> <!-- Error state color -->
+    <color name="colorOnError">#FFFFFF</color> <!-- Text/icons on error color -->
+
+    <!-- Specific background color for EditText in Material Design -->
+    <color name="editTextBackground">#F5F5F5</color>
+
+    <!-- For adaptive icons, if they reference a color directly -->
+    <color name="ic_launcher_background">#FFFFFF</color> <!-- Example, adjust as needed -->
+
+</resources>
