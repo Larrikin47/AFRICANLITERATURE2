@@ -2,30 +2,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.AfricanLiteratureLibraryApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
-        <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
-        <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <!-- Status bar color. -->
+        <!-- Primary brand color (Yellow for controls) -->
+        <item name="colorPrimary">@color/yellow_primary</item>
+        <item name="colorPrimaryVariant">@color/yellow_dark</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color (Grey for accents) -->
+        <item name="colorSecondary">@color/grey_medium</item>
+        <item name="colorSecondaryVariant">@color/grey_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Background colors (Dominantly White) -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/grey_dark</item>
+        <item name="colorOnBackground">@color/grey_dark</item>
+
+        <!-- Status bar color -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-
-        <!-- Text input layout style for Material Components -->
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
-        <item name="editTextBackground">@color/editTextBackground</item>
     </style>
-
-    <style name="Theme.AfricanLiteratureLibraryApp.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.AfricanLiteratureLibraryApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.AfricanLiteratureLibraryApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
