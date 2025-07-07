@@ -66,14 +66,31 @@
             android:background="?android:attr/listDivider"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Navigation Buttons -->
-        <Button
-            android:id="@+id/viewBooksButton"
+        <!-- Book List Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="African Literature Books"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/booksRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/view_books_button"
-            android:layout_marginBottom="12dp" />
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_book" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Navigation Buttons (kept for other features) -->
+        <!-- Removed "View All Books" button as RecyclerView now handles it -->
         <Button
             android:id="@+id/viewWebViewButton"
             android:layout_width="match_parent"
@@ -116,38 +133,6 @@
             android:layout_height="wrap_content"
             android:text="@string/start_sync_service_button"
             android:layout_marginBottom="24dp" />
-
-        <!-- TODO: Add other UI controls as needed, e.g., DatePicker, TimePicker, MapView placeholder -->
-        <!-- Example DatePicker Button (requires a DialogFragment for proper implementation) -->
-        <Button
-            android:id="@+id/openDatePickerButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/open_date_picker"
-            android:visibility="gone"
-            android:layout_marginBottom="12dp" />
-
-        <!-- Example MapView Placeholder (requires Google Play Services and API key) -->
-        <!--
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Map View Placeholder"
-            android:textSize="18sp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#E0E0E0"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Map will go here"
-                android:textColor="#555555"/>
-        </FrameLayout>
-        -->
 
     </LinearLayout>
 </ScrollView>

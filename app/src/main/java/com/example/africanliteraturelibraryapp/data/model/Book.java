@@ -1,21 +1,43 @@
 package com.example.africanliteraturelibraryapp.data.model;
 
+import androidx.room.Entity;
+import androidx.room.Ignore; // Import the @Ignore annotation
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
 
 /**
  * Data model class representing a Book in the African Literature Library.
  * Implements Serializable to allow passing Book objects directly via Intents.
+ *
+ * This class is also annotated as a Room database @Entity.
  */
+@Entity(tableName = "books")
 public class Book implements Serializable {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
     private String author;
     private String genre;
     private String description;
-    private String coverImageUrl; // URL for book cover image
-    private String contentUrl;    // URL for book content (e.g., PDF, EPUB, or HTML)
+    private String coverImageUrl;
+    private String contentUrl;
 
-    // Constructor
+    // Constructor for creating new Book objects (without ID for auto-generation)
+    // This constructor is used when you create a Book object before inserting it into the DB.
+    // Room should IGNORE this constructor when it's trying to read data from the DB.
+    @Ignore // <--- ADD THIS ANNOTATION
+    public Book(String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.description = description;
+        this.coverImageUrl = coverImageUrl;
+        this.contentUrl = contentUrl;
+    }
+
+    // Constructor with ID (used by Room when retrieving from DB and for manual ID assignment if needed)
+    // Room will use this constructor when it reads data from the database.
     public Book(int id, String title, String author, String genre, String description, String coverImageUrl, String contentUrl) {
         this.id = id;
         this.title = title;
@@ -55,7 +77,7 @@ public class Book implements Serializable {
         return contentUrl;
     }
 
-    // Setters (if you need to modify book properties after creation)
+    // Setters
     public void setId(int id) {
         this.id = id;
     }
