@@ -8,11 +8,13 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.africanliteraturelibraryapp.R;
-import com.example.africanliteraturelibraryapp.activities.layoutviews.FrameLayoutActivity;
-import com.example.africanliteraturelibraryapp.activities.layoutviews.LinearLayoutActivity;
-import com.example.africanliteraturelibraryapp.activities.layoutviews.RelativeLayoutActivity;
-import com.example.africanliteraturelibraryapp.activities.layoutviews.TableLayoutActivity;
-import com.example.africanliteraturelibraryapp.activities.layoutviews.TabLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.ConstraintLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.FrameLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.LinearLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.RelativeLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.TableLayoutActivity;
+import com.example.africanliteraturelibraryapp.layouts.TabLayoutActivity;
+
 
 public class LayoutGalleryActivity extends AppCompatActivity {
 
@@ -21,39 +23,54 @@ public class LayoutGalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_gallery);
 
-        // Set up click listeners for each layout demonstration button
-        findViewById(R.id.btnLinearLayout).setOnClickListener(new View.OnClickListener() {
+        // Initialize buttons
+        Button linearLayoutButton = findViewById(R.id.linearLayoutButton);
+        Button frameLayoutButton = findViewById(R.id.frameLayoutButton);
+        Button relativeLayoutButton = findViewById(R.id.relativeLayoutButton);
+        Button tableLayoutButton = findViewById(R.id.tableLayoutButton);
+        Button tabLayoutButton = findViewById(R.id.tabLayoutButton);
+        Button constraintLayoutButton = findViewById(R.id.constraintLayoutButton);
+
+        // Set click listeners
+        linearLayoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LayoutGalleryActivity.this, LinearLayoutActivity.class));
             }
         });
 
-        findViewById(R.id.btnFrameLayout).setOnClickListener(new View.OnClickListener() {
+        frameLayoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LayoutGalleryActivity.this, FrameLayoutActivity.class));
             }
         });
 
-        findViewById(R.id.btnRelativeLayout).setOnClickListener(new View.OnClickListener() {
+        relativeLayoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LayoutGalleryActivity.this, RelativeLayoutActivity.class));
             }
         });
 
-        findViewById(R.id.btnTableLayout).setOnClickListener(new View.OnClickListener() {
+        tableLayoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LayoutGalleryActivity.this, TableLayoutActivity.class));
             }
         });
 
-        findViewById(R.id.btnTabLayout).setOnClickListener(new View.OnClickListener() {
+        tabLayoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LayoutGalleryActivity.this, TabLayoutActivity.class));
+            }
+        });
+
+        constraintLayoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LayoutGalleryActivity.this, ConstraintLayoutActivity.class));
             }
         });
     }

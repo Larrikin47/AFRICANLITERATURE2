@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".layouts.ConstraintLayoutActivity">
+
+    <TextView
+        android:id="@+id/constraintLayoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constraint Layout Example"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/bookCoverConstraint"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        android:contentDescription="Book Cover"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/bookTitleConstraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="The Famished Road"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/bookCoverConstraint"
+        app:layout_constraintTop_toTopOf="@id/bookCoverConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/bookAuthorConstraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ben Okri"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/bookTitleConstraint"
+        app:layout_constraintTop_toBottomOf="@id/bookTitleConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/bookDescriptionConstraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="An epic magical realist novel set in Nigeria, following the spiritual journey of Azaro, a spirit-child."
+        android:textSize="14sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/bookTitleConstraint"
+        app:layout_constraintTop_toBottomOf="@id/bookAuthorConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/viewDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

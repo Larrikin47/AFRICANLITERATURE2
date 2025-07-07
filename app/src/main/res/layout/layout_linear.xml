@@ -6,51 +6,97 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center_horizontal"
-    tools:context=".activities.layoutviews.LinearLayoutActivity">
+    tools:context=".layouts.LinearLayoutActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/linear_layout_title"
+        android:text="Linear Layout Example"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
-        android:textColor="?attr/colorPrimary" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button One"
-        android:layout_marginBottom="8dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button Two"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="16dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is a TextView inside a LinearLayout."
-        android:layout_marginTop="16dp"
-        android:textSize="16sp" />
+        android:text="Book Snippets:"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="8dp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Book 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="24dp">
-        <CheckBox
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option A"
-            android:layout_marginEnd="16dp"/>
-        <CheckBox
+            android:text="Things Fall Apart"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option B"/>
+            android:text="Chinua Achebe"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Book 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Half of a Yellow Sun"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chimamanda Ngozi Adichie"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Book 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Joys of Motherhood"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buchi Emecheta"
+            android:textSize="14sp" />
     </LinearLayout>
 
 </LinearLayout>

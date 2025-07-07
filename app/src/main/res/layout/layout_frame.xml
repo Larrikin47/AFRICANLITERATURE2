@@ -3,46 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".activities.layoutviews.FrameLayoutActivity">
+    tools:context=".layouts.FrameLayoutActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/frame_layout_title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_marginBottom="24dp"
-        android:textColor="?attr/colorPrimary" />
-
-    <!-- First element, will be at the bottom -->
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_background"
+        android:contentDescription="Background image" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" /> <!-- Semi-transparent overlay -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_gravity="center"
-        android:alpha="0.5"
-        android:contentDescription="@string/image_description" />
+        android:padding="24dp"
+        android:background="@android:color/transparent">
 
-    <!-- Second element, will be on top of the first -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Overlay Text"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:background="#88000000"
-        android:padding="10dp"
-        android:layout_gravity="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Featured Book"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
 
-    <!-- A button at the bottom -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click Me"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="32dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purple Hibiscus"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chimamanda Ngozi Adichie"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read Now"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
 </FrameLayout>
