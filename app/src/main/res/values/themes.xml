@@ -16,6 +16,7 @@
         <item name="android:colorBackground">@color/white</item>
         <item name="colorSurface">@color/white</item>
         <item name="colorOnSurface">@color/grey_dark</item>
+        <item name="colorOnSurfaceVariant">@color/grey_medium</item> <!-- ADDED THIS LINE -->
         <item name="colorOnBackground">@color/grey_dark</item>
 
         <!-- Status bar color -->

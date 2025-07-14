@@ -38,9 +38,9 @@
                 android:textSize="18sp"
                 android:textColor="?attr/colorOnSurface"
                 tools:textColor="@color/grey_dark"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:layout_marginBottom="4dp" />
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/itemBookAuthor"
@@ -49,9 +49,9 @@
                 android:textSize="14sp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 tools:textColor="@color/grey_medium"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_marginBottom="4dp" />
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/itemBookGenre"
@@ -60,8 +60,8 @@
                 android:textSize="12sp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 tools:textColor="@color/grey_medium"
-            android:maxLines="1"
-            android:ellipsize="end" />
+                android:maxLines="1"
+                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/itemBookDescription"
@@ -70,9 +70,9 @@
                 android:textSize="12sp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 tools:textColor="@color/grey_medium"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:layout_marginTop="8dp" />
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="8dp" />
 
         </LinearLayout>
 
